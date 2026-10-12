@@ -6,6 +6,9 @@ theme:
   features:
     - navigation.sections
     - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
     - content.code.copy
 
 plugins:
@@ -18,9 +21,12 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-
   - pymdownx.highlight
   - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+  - attr_list
 
 extra_css:
   - stylesheets/extra.css
@@ -28,3 +34,25 @@ extra_css:
 extra_javascript:
   - javascripts/svg-pan-zoom.min.js
   - javascripts/mermaid-zoom.js
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - "Overview": index.md
+  - "Master SDD Specification": MASTER_SDD_PACKAGE_TEMPLATE_TUESDAY.md
+  - "Architecture & Scope":
+      - "01. High-Level System Architecture": DIAGRAM_01_HIGH_LEVEL_SYSTEM_ARCHITECTURE.md
+      - "02. Module & Component Architecture": DIAGRAM_02_MODULE_COMPONENT_DIAGRAM.md
+      - "03. Use-Case Model & Scope": DIAGRAM_03_USE_CASE_DIAGRAM.md
+      - "04. RBAC & Maker-Checker Matrix": DIAGRAM_04_RBAC_MAKER_CHECKER_MATRIX.md
+  - "Business Process Workflows":
+      - "05. Employee Lifecycle Flowchart": DIAGRAM_05_EMPLOYEE_LIFECYCLE_FLOWCHART.md
+      - "06. Leave Management Flowchart": DIAGRAM_06_LEAVE_MANAGEMENT_FLOWCHART.md
+      - "07. Payroll Reconciliation Flowchart": DIAGRAM_07_PAYROLL_RECONCILIATION_FLOWCHART.md
+      - "08. Performance Appraisal Flowchart": DIAGRAM_08_PERFORMANCE_APPRAISAL_FLOWCHART.md
+  - "Data & Database Architecture":
+      - "09. Entity-Relationship Diagram": DIAGRAM_09_ENTITY_RELATIONSHIP_DIAGRAM.md
+      - "10. Database Schema & Data Dictionary": DIAGRAM_10_DATABASE_SCHEMA_DATA_DICTIONARY.md
+  - "Algorithmic & Behavioral Design":
+      - "11. UML Activity Diagrams": DIAGRAM_11_UML_ACTIVITY_DIAGRAMS.md
+      - "12. UML Sequence Diagrams": DIAGRAM_12_UML_SEQUENCE_DIAGRAMS.md

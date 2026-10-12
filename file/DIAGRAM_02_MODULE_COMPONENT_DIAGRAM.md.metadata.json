@@ -1,0 +1,5 @@
+{
+  "summary": "Module and Component Diagram (C4 Level 3) specification for Lion International Bank HRMS (LIBHRMS / anbesa_hr). Details the 5 core application subsystems (Core HR, Leave, Payroll, Performance, Training), their internal DocTypes and controllers, cross-cutting engines (Ethiopian Calendar, Document Store), and inter-module data dependencies.",
+  "updatedAt": "2026-10-09T06:58:22.180815500Z",
+  "userFacing": true
+}

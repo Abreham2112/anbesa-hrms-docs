@@ -1,0 +1,5 @@
+{
+  "summary": "High-Level System Architecture (HLSA) diagram and architectural specification document for Lion International Bank Human Resource & Integrated Payroll Management System (LIBHRMS / anbesa_hr). Includes system boundaries, user layers, Nginx reverse proxy, Frappe core modules, Redis caching and background queue workers, MariaDB persistence, Ethiopian calendar engine, and CBS batch file export.",
+  "updatedAt": "2026-10-09T06:16:44.319667800Z",
+  "userFacing": true
+}

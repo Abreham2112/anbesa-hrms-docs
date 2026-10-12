@@ -1,0 +1,5 @@
+{
+  "summary": "UML Activity Diagrams specification document for Lion International Bank HRMS (LIBHRMS / anbesa_hr). Details the formal internal algorithmic logic and decision branching for the two highest-complexity calculation engines: (1) Dual-Calendar Leave Accrual & Birr Encashment Valuation, and (2) Asynchronous Monthly Payroll Batch Execution with Ethiopian progressive tax (ERCA 7-tier) and 7%/11% pension formulas.",
+  "updatedAt": "2026-10-12T07:21:20.078570800Z",
+  "userFacing": true
+}

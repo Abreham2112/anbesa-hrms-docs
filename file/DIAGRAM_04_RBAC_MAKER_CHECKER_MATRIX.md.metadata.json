@@ -1,0 +1,5 @@
+{
+  "summary": "Role-Based Access Control (RBAC) and Maker-Checker Governance Matrix specification for Lion International Bank HRMS (LIBHRMS / anbesa_hr). Details 8 bank roles, granular CRUDSE permissions across all DocTypes, user permission filtering, and Maker-Checker segregation of duties.",
+  "updatedAt": "2026-10-09T08:24:38.390252700Z",
+  "userFacing": true
+}

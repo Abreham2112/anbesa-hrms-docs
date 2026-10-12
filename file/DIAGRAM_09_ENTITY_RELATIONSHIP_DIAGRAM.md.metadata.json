@@ -1,0 +1,5 @@
+{
+  "summary": "Entity-Relationship (ER) Diagram specification document for Lion International Bank HRMS (LIBHRMS / anbesa_hr). Details the relational data model across 5 core domains: Core HR & Org Hierarchy, Leave Ledger System, Payroll & Compensation, Performance Appraisal (11/14/15 criteria), and Separation/Clearance with Labour Proclamation 1156/2019 settlement linkages.",
+  "updatedAt": "2026-10-12T05:34:37.617880Z",
+  "userFacing": true
+}

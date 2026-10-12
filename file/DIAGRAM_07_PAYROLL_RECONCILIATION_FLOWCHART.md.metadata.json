@@ -1,0 +1,5 @@
+{
+  "summary": "Payroll Reconciliation Process Flowchart (BPMN Swimlane) specification for Lion International Bank HRMS (LIBHRMS / anbesa_hr). Details the end-to-end monthly payroll cycle: input collation, asynchronous batch processing, statutory Ethiopian tax and 7%/11% pension deductions, variance analysis, Maker-Checker sign-off, and CBS batch export file generation.",
+  "updatedAt": "2026-10-09T11:03:21.246195100Z",
+  "userFacing": true
+}

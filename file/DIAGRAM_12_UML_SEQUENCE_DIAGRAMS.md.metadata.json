@@ -1,0 +1,5 @@
+{
+  "summary": "UML Sequence Diagrams specification document for Lion International Bank HRMS (LIBHRMS / anbesa_hr). Details the time-ordered interactive message flows for the two most critical banking operations: (1) Multi-Tier Maker-Checker Monthly Payroll Batch Execution & CBS Export, and (2) Dual-Calendar Leave Application with Reliever Handover and Immutable Ledger Debit.",
+  "updatedAt": "2026-10-12T11:12:59.215333400Z",
+  "userFacing": true
+}
