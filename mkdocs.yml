@@ -1,4 +1,5 @@
 site_name: Anbesa HRMS Documentation
+site_url: https://abreham2112.github.io/anbesa-hrms-docs/
 
 theme:
   name: material
