@@ -3,6 +3,8 @@ site_url: https://abreham2112.github.io/anbesa-hrms-docs/
 
 theme:
   name: material
+  palette:
+    primary: black
   features:
     - navigation.sections
     - navigation.expand
