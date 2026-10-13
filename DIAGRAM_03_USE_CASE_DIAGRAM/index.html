@@ -1,0 +1,1476 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://abreham2112.github.io/anbesa-hrms-docs/DIAGRAM_03_USE_CASE_DIAGRAM/">
+      
+      
+        <link rel="prev" href="../DIAGRAM_02_MODULE_COMPONENT_DIAGRAM/">
+      
+      
+        <link rel="next" href="../DIAGRAM_04_RBAC_MAKER_CHECKER_MATRIX/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>03. Use-Case Model &amp; Scope - Anbesa HRMS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#use-case-diagram-functional-scope-specification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Anbesa HRMS Documentation" class="md-header__button md-logo" aria-label="Anbesa HRMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Anbesa HRMS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              03. Use-Case Model &amp; Scope
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Anbesa HRMS Documentation" class="md-nav__button md-logo" aria-label="Anbesa HRMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Anbesa HRMS Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MASTER_SDD_PACKAGE_TEMPLATE_TUESDAY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master SDD Specification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture &amp; Scope
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_01_HIGH_LEVEL_SYSTEM_ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01. High-Level System Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_02_MODULE_COMPONENT_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02. Module &amp; Component Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03. Use-Case Model &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03. Use-Case Model &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-functional-scope-overview-actor-generalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Functional Scope Overview &amp; Actor Generalization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Functional Scope Overview &amp; Actor Generalization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#universal-actor-inheritance-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Universal Actor Inheritance Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-modular-use-case-model-zero-overlap-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Modular Use-Case Model (Zero-Overlap Decomposition)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Modular Use-Case Model (Zero-Overlap Decomposition)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-1-self-service-branch-supervisory-workflows-ess-mss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package 1: Self-Service &amp; Branch Supervisory Workflows (ESS &amp; MSS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-2-hr-operations-personnel-lifecycle-head-office-hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package 2: HR Operations &amp; Personnel Lifecycle (Head Office HR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-3-payroll-financial-handover-governance-finance-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package 3: Payroll, Financial Handover &amp; Governance (Finance &amp; Admin)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-detailed-actor-to-use-case-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Detailed Actor-to-Use-Case Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-key-banking-business-rules-captured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Key Banking Business Rules Captured
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_04_RBAC_MAKER_CHECKER_MATRIX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04. RBAC &amp; Maker-Checker Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Process Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Business Process Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_05_EMPLOYEE_LIFECYCLE_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05. Employee Lifecycle Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_06_LEAVE_MANAGEMENT_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06. Leave Management Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_07_PAYROLL_RECONCILIATION_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07. Payroll Reconciliation Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_08_PERFORMANCE_APPRAISAL_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08. Performance Appraisal Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data &amp; Database Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data &amp; Database Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_09_ENTITY_RELATIONSHIP_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09. Entity-Relationship Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_10_DATABASE_SCHEMA_DATA_DICTIONARY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Database Schema &amp; Data Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithmic &amp; Behavioral Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algorithmic &amp; Behavioral Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_11_UML_ACTIVITY_DIAGRAMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. UML Activity Diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_12_UML_SEQUENCE_DIAGRAMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. UML Sequence Diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-functional-scope-overview-actor-generalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Functional Scope Overview &amp; Actor Generalization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Functional Scope Overview &amp; Actor Generalization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#universal-actor-inheritance-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Universal Actor Inheritance Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-modular-use-case-model-zero-overlap-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Modular Use-Case Model (Zero-Overlap Decomposition)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Modular Use-Case Model (Zero-Overlap Decomposition)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-1-self-service-branch-supervisory-workflows-ess-mss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package 1: Self-Service &amp; Branch Supervisory Workflows (ESS &amp; MSS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-2-hr-operations-personnel-lifecycle-head-office-hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package 2: HR Operations &amp; Personnel Lifecycle (Head Office HR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-3-payroll-financial-handover-governance-finance-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package 3: Payroll, Financial Handover &amp; Governance (Finance &amp; Admin)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-detailed-actor-to-use-case-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Detailed Actor-to-Use-Case Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-key-banking-business-rules-captured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Key Banking Business Rules Captured
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="use-case-diagram-functional-scope-specification">Use-Case Diagram &amp; Functional Scope Specification</h1>
+<h2 id="lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr">Lion International Bank Human Resource &amp; Integrated Payroll Management System (<code>anbesa_hr</code>)</h2>
+<hr>
+<h3 id="1-functional-scope-overview-actor-generalization">1. Functional Scope Overview &amp; Actor Generalization</h3>
+<p>The <strong>Use-Case Model</strong> formalizes the behavioral boundaries of the <strong>Lion International Bank HRMS (<code>anbesa_hr</code>)</strong>.</p>
+<h4 id="universal-actor-inheritance-model">Universal Actor Inheritance Model</h4>
+<p>In a commercial bank, every user—whether a Branch Manager, an HR Specialist, a Finance Officer, or a System Administrator—is first and foremost a bank employee. </p>
+<p>In UML, this is modeled via <strong>Actor Generalization (Inheritance)</strong>:
+* <strong><code>Employee (Base Actor / ESS)</code></strong>: The foundational actor representing all bank personnel.
+* <strong>Specialized Administrative Actors (<code>Branch Manager</code>, <code>HR Officer</code>, <code>Finance Officer</code>, <code>System Admin</code>)</strong>: Specialized actors that <strong>inherit all baseline ESS capabilities</strong> (viewing their own profile, applying for their own leave, viewing their own payslips, completing their own self-appraisal) while adding dedicated operational duties.</p>
+<pre class="mermaid"><code>flowchart TB
+    %% =========================================================================
+    %% ACTOR GENERALIZATION / INHERITANCE HIERARCHY
+    %% =========================================================================
+    subgraph HIERARCHY["Bank Actor Inheritance Model"]
+        direction TB
+
+        %% Base Actor
+        ACT_BASE["👤 &lt;b&gt;Employee (Base Actor / ESS)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;All bank staff, including managers, HR, and admins&lt;/i&gt;"]
+
+        %% Specialized Roles
+        ACT_MGR["👔 &lt;b&gt;Branch / Line Manager&lt;/b&gt;"]
+        ACT_HR["📋 &lt;b&gt;HR Operations Officer&lt;/b&gt;"]
+        ACT_FIN["💰 &lt;b&gt;Payroll &amp; Finance Officer&lt;/b&gt;"]
+        ACT_ADM["⚙️ &lt;b&gt;System Administrator&lt;/b&gt;"]
+
+        %% UML Inheritance (Generalization)
+        ACT_MGR --&gt;|«inherits ESS»| ACT_BASE
+        ACT_HR --&gt;|«inherits ESS»| ACT_BASE
+        ACT_FIN --&gt;|«inherits ESS»| ACT_BASE
+        ACT_ADM --&gt;|«inherits ESS»| ACT_BASE
+    end
+
+    %% Base Capabilities inherited by everyone
+    subgraph ESS_CAPS["Universal Self-Service Capabilities (Inherited by ALL Bank Staff)"]
+        direction LR
+        UC_PROFILE(["View / Request Update to Own Bio-Data"])
+        UC_LEAVE_OWN(["Apply for Own Annual / Sick Leave"])
+        UC_PAY_OWN(["View &amp; Download Own Monthly Payslip"])
+        UC_PERF_OWN(["Submit Own Periodic Self-Appraisal"])
+        UC_TRAIN_OWN(["Browse Training Catalog &amp; Course History"])
+    end
+
+    ACT_BASE --&gt; UC_PROFILE
+    ACT_BASE --&gt; UC_LEAVE_OWN
+    ACT_BASE --&gt; UC_PAY_OWN
+    ACT_BASE --&gt; UC_PERF_OWN
+    ACT_BASE --&gt; UC_TRAIN_OWN
+
+    style ACT_BASE fill:#D4EFDF,stroke:#27AE60,stroke-width:3px,color:#145A32
+    style ACT_MGR fill:#E8F8F5,stroke:#16A085,stroke-width:2px,color:#0E6251
+    style ACT_HR fill:#FEF9E7,stroke:#D4AC0D,stroke-width:2px,color:#7D6608
+    style ACT_FIN fill:#F4ECF7,stroke:#8E44AD,stroke-width:2px,color:#512E5F
+    style ACT_ADM fill:#F2F4F4,stroke:#7F8C8D,stroke-width:2px,color:#2C3E50
+    style ESS_CAPS fill:#FFFFFF,stroke:#27AE60,stroke-width:2px,stroke-dasharray: 4 4,color:#145A32</code></pre>
+<hr>
+<h3 id="2-modular-use-case-model-zero-overlap-decomposition">2. Modular Use-Case Model (Zero-Overlap Decomposition)</h3>
+<p>To ensure zero line crossing and strict readability, the use-case model is decomposed into <strong>3 targeted operational packages</strong>:</p>
+<h4 id="package-1-self-service-branch-supervisory-workflows-ess-mss">Package 1: Self-Service &amp; Branch Supervisory Workflows (ESS &amp; MSS)</h4>
+<pre class="mermaid"><code>flowchart LR
+    %% Actors
+    ACT_EMP["👤 &lt;b&gt;Employee (ESS)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Branch / HO Staff&lt;/i&gt;"]
+    ACT_MGR["👔 &lt;b&gt;Branch / Line Manager (MSS)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Supervisor / Branch Head&lt;/i&gt;"]
+
+    %% Self Service &amp; Management Use Cases
+    subgraph ESS_MSS["1. Self-Service &amp; Branch Operations"]
+        direction TB
+        UC_EMP_VIEW(["View Own Dossier &amp; Bio-Data"])
+        UC_EMP_UPDATE(["Submit Profile Update Request"])
+        UC_PAY_SLIP(["View &amp; Download Monthly Payslip"])
+        UC_TRAIN_VIEW(["Browse Training Catalog"])
+
+        subgraph LEAVE_FLOW["Leave Workflow"]
+            direction LR
+            UC_LEAVE_APPLY(["Submit Leave Application"])
+            UC_LEAVE_APPROVE(["Approve / Reject Leave Request"])
+            UC_LEAVE_APPLY -.-&gt;|«triggers»| UC_LEAVE_APPROVE
+        end
+
+        subgraph PERF_FLOW["Appraisal Workflow"]
+            direction LR
+            UC_PERF_SELF(["Submit Self-Appraisal"])
+            UC_PERF_EVAL(["Conduct Manager Appraisal &amp; Rating"])
+            UC_PERF_SELF -.-&gt;|«triggers»| UC_PERF_EVAL
+        end
+    end
+
+    %% Clean, Direct Associations
+    ACT_EMP --&gt; UC_EMP_VIEW
+    ACT_EMP --&gt; UC_EMP_UPDATE
+    ACT_EMP --&gt; UC_PAY_SLIP
+    ACT_EMP --&gt; UC_TRAIN_VIEW
+    ACT_EMP --&gt; UC_LEAVE_APPLY
+    ACT_EMP --&gt; UC_PERF_SELF
+
+    ACT_MGR --&gt; UC_LEAVE_APPROVE
+    ACT_MGR --&gt; UC_PERF_EVAL
+
+    style ACT_EMP fill:#EBF5FB,stroke:#2980B9,stroke-width:2px,color:#1B4F72
+    style ACT_MGR fill:#E8F8F5,stroke:#16A085,stroke-width:2px,color:#0E6251
+    style ESS_MSS fill:#FFFFFF,stroke:#34495E,stroke-width:2px,color:#2C3E50</code></pre>
+<hr>
+<h4 id="package-2-hr-operations-personnel-lifecycle-head-office-hr">Package 2: HR Operations &amp; Personnel Lifecycle (Head Office HR)</h4>
+<pre class="mermaid"><code>flowchart LR
+    %% Actor
+    ACT_HR["📋 &lt;b&gt;HR Operations Officer&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Head Office Personnel Specialist&lt;/i&gt;"]
+
+    %% HR Operations Use Cases
+    subgraph HR_OPS["2. Core Personnel Operations (anbesa_hr)"]
+        direction TB
+        UC_EMP_MANAGE(["Manage Complete 9-Tab Employee Master"])
+        UC_GUARANTOR(["Register Guarantor &amp; Collateral Undertakings"])
+        UC_TRANSFER(["Process Branch Transfers (Lateral / Promotion)"])
+        UC_DISCIPLINE(["Log Disciplinary Actions &amp; Commendations"])
+        UC_CLEARANCE(["Execute Exit Clearance Checklist"])
+        UC_LEAVE_ALLOC(["Manage Leave Allocations &amp; Entitlements"])
+        UC_LEAVE_ENCASH(["Calculate Unused Leave Birr Encashment"])
+        UC_TRAIN_RECORD(["Log Training History &amp; Certifications"])
+        UC_TRAIN_BOND(["Record Service Bonding Agreements"])
+    end
+
+    %% Clean direct lines
+    ACT_HR --&gt; UC_EMP_MANAGE
+    ACT_HR --&gt; UC_GUARANTOR
+    ACT_HR --&gt; UC_TRANSFER
+    ACT_HR --&gt; UC_DISCIPLINE
+    ACT_HR --&gt; UC_CLEARANCE
+    ACT_HR --&gt; UC_LEAVE_ALLOC
+    ACT_HR --&gt; UC_LEAVE_ENCASH
+    ACT_HR --&gt; UC_TRAIN_RECORD
+    ACT_HR --&gt; UC_TRAIN_BOND
+
+    style ACT_HR fill:#FEF9E7,stroke:#D4AC0D,stroke-width:2px,color:#7D6608
+    style HR_OPS fill:#FFFFFF,stroke:#34495E,stroke-width:2px,color:#2C3E50</code></pre>
+<hr>
+<h4 id="package-3-payroll-financial-handover-governance-finance-admin">Package 3: Payroll, Financial Handover &amp; Governance (Finance &amp; Admin)</h4>
+<pre class="mermaid"><code>flowchart LR
+    %% Actors
+    ACT_FIN["💰 &lt;b&gt;Payroll &amp; Finance Officer&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Compensation Specialist&lt;/i&gt;"]
+    ACT_ADM["⚙️ &lt;b&gt;System Administrator&lt;/b&gt;&lt;br/&gt;&lt;i&gt;IT &amp; Security Auditor&lt;/i&gt;"]
+
+    %% Finance &amp; Payroll
+    subgraph PAY_GOV["3. Compensation &amp; System Governance"]
+        direction TB
+
+        subgraph PAYROLL["Payroll Processing &amp; Settlement"]
+            direction TB
+            UC_PAY_SCALE(["Configure Bank Salary Grades &amp; Scales"])
+            UC_PAY_RUN(["Execute Monthly Payroll Calculation"])
+            UC_PAY_RECON(["Reconcile Tax, Pension &amp; Loan Cuts"])
+            UC_PAY_EXPORT(["Generate CBS Salary Batch Export (CSV/XLS)"])
+
+            UC_PAY_RUN -.-&gt;|«includes»| UC_PAY_RECON
+            UC_PAY_RECON -.-&gt;|«enables»| UC_PAY_EXPORT
+        end
+
+        subgraph GOVERNANCE["Security &amp; Infrastructure"]
+            direction TB
+            UC_ADM_RBAC(["Manage User Roles &amp; Permissions"])
+            UC_ADM_CAL(["Configure Ethiopian Calendar &amp; Holidays"])
+            UC_ADM_AUDIT(["Inspect System Audit Logs &amp; Activity Trails"])
+        end
+    end
+
+    %% Finance Links
+    ACT_FIN --&gt; UC_PAY_SCALE
+    ACT_FIN --&gt; UC_PAY_RUN
+    ACT_FIN --&gt; UC_PAY_EXPORT
+
+    %% Admin Links
+    ACT_ADM --&gt; UC_ADM_RBAC
+    ACT_ADM --&gt; UC_ADM_CAL
+    ACT_ADM --&gt; UC_ADM_AUDIT
+
+    style ACT_FIN fill:#F4ECF7,stroke:#8E44AD,stroke-width:2px,color:#512E5F
+    style ACT_ADM fill:#F2F4F4,stroke:#7F8C8D,stroke-width:2px,color:#2C3E50
+    style PAY_GOV fill:#FFFFFF,stroke:#34495E,stroke-width:2px,color:#2C3E50</code></pre>
+<hr>
+<h3 id="3-detailed-actor-to-use-case-matrix">3. Detailed Actor-to-Use-Case Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Actor</th>
+<th style="text-align: left;">Functional Domain</th>
+<th style="text-align: left;">Primary Use Cases</th>
+<th style="text-align: left;">Governance / Security Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Employee (ESS)</strong></td>
+<td style="text-align: left;">Self-Service</td>
+<td style="text-align: left;">• View Bio-Data &amp; Amharic Profile<br>• Submit Leave Application<br>• View Monthly Payslips<br>• Complete Self-Appraisal<br>• Browse Training Catalog</td>
+<td style="text-align: left;">Read-only access to confidential HR data; restricted strictly to own employee record.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Branch / Line Manager</strong></td>
+<td style="text-align: left;">Team Oversight</td>
+<td style="text-align: left;">• Approve / Reject Leave Requests<br>• Conduct Subordinate Appraisals<br>• Endorse Acting / Transfer requests</td>
+<td style="text-align: left;">Access restricted strictly to employees within their direct branch or reporting line.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HR Operations Officer</strong></td>
+<td style="text-align: left;">Core HR Operations</td>
+<td style="text-align: left;">• Manage 9-Tab Employee Master<br>• Register Guarantors &amp; Collateral<br>• Process Transfers &amp; Promotions<br>• Log Disciplinary Actions<br>• Manage Exit Clearances</td>
+<td style="text-align: left;">Full write access to HR records; maker in personnel lifecycle events.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Payroll &amp; Finance Officer</strong></td>
+<td style="text-align: left;">Compensation</td>
+<td style="text-align: left;">• Configure Salary Grades &amp; Scales<br>• Run Monthly Payroll Batch<br>• Reconcile Deductions (Tax, Pension)<br>• Export CBS Salary Batch File</td>
+<td style="text-align: left;">Maker-Checker separation; can generate the Core Banking export file but cannot alter personal bio-data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>System Administrator</strong></td>
+<td style="text-align: left;">Governance &amp; IT</td>
+<td style="text-align: left;">• Assign User Roles &amp; Permissions<br>• Set Ethiopian Calendar &amp; Holidays<br>• Inspect Security &amp; Audit Logs</td>
+<td style="text-align: left;">Administrative privileges; strictly audited via system change logs.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="4-key-banking-business-rules-captured">4. Key Banking Business Rules Captured</h3>
+<ol>
+<li><strong>Guarantor &amp; Collateral Tracking (<code>UC_GUARANTOR</code>):</strong></li>
+<li>Before an employee's probation can be confirmed, HR must register at least one verified guarantor and upload their liability undertaking document into the system.</li>
+<li><strong>Leave Balance Validation (<code>UC_LEAVE_APPLY</code> <span class="arithmatex">\(\rightarrow\)</span> <code>UC_LEAVE_BAL</code>):</strong></li>
+<li>The system automatically blocks leave requests if the requested days exceed the accrued balance (calculated across Gregorian and Ethiopian Calendar rules).</li>
+<li><strong>CBS Disbursement Export (<code>UC_PAY_EXPORT</code>):</strong></li>
+<li>Once the monthly payroll batch is finalized and reconciled by Finance, the system generates the standardized Excel/CSV file with account numbers and net ETB amounts for manual Core Banking upload.</li>
+<li><strong>Exit Clearance Checklist (<code>UC_CLEARANCE</code>):</strong></li>
+<li>An employee cannot be marked as "Separated" until mandatory bank clearances are signed off (Outstanding staff loans cleared, branch cash balanced, bank ID returned, and guarantor liabilities released).</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/svg-pan-zoom.min.js"></script>
+      
+        <script src="../javascripts/mermaid-zoom.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

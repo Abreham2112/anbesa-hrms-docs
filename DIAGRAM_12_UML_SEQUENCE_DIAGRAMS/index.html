@@ -1,0 +1,1295 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://abreham2112.github.io/anbesa-hrms-docs/DIAGRAM_12_UML_SEQUENCE_DIAGRAMS/">
+      
+      
+        <link rel="prev" href="../DIAGRAM_11_UML_ACTIVITY_DIAGRAMS/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>12. UML Sequence Diagrams - Anbesa HRMS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uml-sequence-diagrams-time-ordered-interactive-execution" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Anbesa HRMS Documentation" class="md-header__button md-logo" aria-label="Anbesa HRMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Anbesa HRMS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              12. UML Sequence Diagrams
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Anbesa HRMS Documentation" class="md-nav__button md-logo" aria-label="Anbesa HRMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Anbesa HRMS Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MASTER_SDD_PACKAGE_TEMPLATE_TUESDAY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master SDD Specification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture &amp; Scope
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_01_HIGH_LEVEL_SYSTEM_ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01. High-Level System Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_02_MODULE_COMPONENT_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02. Module &amp; Component Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_03_USE_CASE_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03. Use-Case Model &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_04_RBAC_MAKER_CHECKER_MATRIX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04. RBAC &amp; Maker-Checker Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Process Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Business Process Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_05_EMPLOYEE_LIFECYCLE_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05. Employee Lifecycle Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_06_LEAVE_MANAGEMENT_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06. Leave Management Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_07_PAYROLL_RECONCILIATION_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07. Payroll Reconciliation Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_08_PERFORMANCE_APPRAISAL_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08. Performance Appraisal Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data &amp; Database Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data &amp; Database Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_09_ENTITY_RELATIONSHIP_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09. Entity-Relationship Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_10_DATABASE_SCHEMA_DATA_DICTIONARY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Database Schema &amp; Data Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithmic &amp; Behavioral Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algorithmic &amp; Behavioral Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_11_UML_ACTIVITY_DIAGRAMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. UML Activity Diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. UML Sequence Diagrams
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. UML Sequence Diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-component-interactions-for-mission-critical-banking-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formal Component Interactions for Mission-Critical Banking Workflows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-purpose-uml-modeling-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose &amp; UML Modeling Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sequence-diagram-1-multi-tier-maker-checker-payroll-execution-cbs-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Sequence Diagram 1: Multi-Tier Maker-Checker Payroll Execution &amp; CBS Export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sequence-diagram-2-dual-calendar-leave-application-reliever-handover-ledger-debit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sequence Diagram 2: Dual-Calendar Leave Application, Reliever Handover &amp; Ledger Debit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-technical-architectural-strengths-documented" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technical Architectural Strengths Documented
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-component-interactions-for-mission-critical-banking-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formal Component Interactions for Mission-Critical Banking Workflows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-purpose-uml-modeling-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose &amp; UML Modeling Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sequence-diagram-1-multi-tier-maker-checker-payroll-execution-cbs-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Sequence Diagram 1: Multi-Tier Maker-Checker Payroll Execution &amp; CBS Export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sequence-diagram-2-dual-calendar-leave-application-reliever-handover-ledger-debit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sequence Diagram 2: Dual-Calendar Leave Application, Reliever Handover &amp; Ledger Debit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-technical-architectural-strengths-documented" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technical Architectural Strengths Documented
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="uml-sequence-diagrams-time-ordered-interactive-execution">UML Sequence Diagrams: Time-Ordered Interactive Execution</h1>
+<h2 id="lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr">Lion International Bank Human Resource &amp; Integrated Payroll Management System (<code>anbesa_hr</code>)</h2>
+<h3 id="formal-component-interactions-for-mission-critical-banking-workflows">Formal Component Interactions for Mission-Critical Banking Workflows</h3>
+<hr>
+<h3 id="1-purpose-uml-modeling-context">1. Purpose &amp; UML Modeling Context</h3>
+<p>While Activity Diagrams specify the internal mathematical algorithms and decision branches, <strong>UML Sequence Diagrams</strong> model the <strong>chronological sequence of messages, API calls, asynchronous tasks, and database transactions</strong> exchanged between system participants (Actors, Frontends, Controllers, Asynchronous Workers, and Persistence Databases).</p>
+<p>For <strong>LIBHRMS (<code>anbesa_hr</code>)</strong>, this document details the interactions for the <strong>two most critical operational transactions</strong>:
+1. <strong>Sequence Diagram 1: Multi-Tier Maker-Checker Monthly Payroll Execution &amp; CBS Export:</strong>
+   * Documents the complete decoupled sequence from Payroll Officer initiation → Redis Queue asynchronous processing → Finance Director audit verification → Immutable submission → Core Banking (CBS) batch export file generation.
+2. <strong>Sequence Diagram 2: Dual-Calendar Leave Application, Reliever Handover &amp; Ledger Debit:</strong>
+   * Documents the interactive flow from Employee self-service submission in Ethiopian Calendar (EC) → Calendar translation → Reliever teller cash acceptance → Branch Manager approval → Real-time debit posting to <code>tabLeave Ledger Entry</code>.</p>
+<hr>
+<h3 id="2-sequence-diagram-1-multi-tier-maker-checker-payroll-execution-cbs-export">2. Sequence Diagram 1: Multi-Tier Maker-Checker Payroll Execution &amp; CBS Export</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Maker as 👤 Payroll Officer (Maker)
+    participant UI as 🖥️ Frappe Desk Web UI
+    participant API as ⚙️ Payroll Controller (Python)
+    participant RQ as ⚡ Redis Queue (RQ)
+    participant Worker as 🔄 Background Worker
+    participant DB as 🗄️ MariaDB Database
+    actor Checker as 👔 Finance Director (Checker)
+    participant CBS as 🏦 Core Banking System (CBS)
+
+    %% Step 1: Batch Initiation
+    Note over Maker,API: 1. Monthly Payroll Initiation &amp; Enqueueing
+    Maker-&gt;&gt;UI: Selects Pay Period &amp; clicks "Process Monthly Payroll Batch"
+    UI-&gt;&gt;API: POST /api/method/anbesa_hr.payroll.create_batch(period_id)
+    API-&gt;&gt;DB: Check active cutoff date &amp; verify period unlocked
+    DB--&gt;&gt;API: Period Valid
+    API-&gt;&gt;RQ: Enqueue job: process_payroll_worker(batch_id)
+    RQ--&gt;&gt;API: Task ID #1042 Enqueued
+    API--&gt;&gt;UI: Return HTTP 200: "Batch Calculation Dispatched in Background"
+    UI--&gt;&gt;Maker: Shows non-blocking toast: "Calculation running in background"
+
+    %% Step 2: Asynchronous Calculation Loop
+    Note over RQ,DB: 2. Asynchronous Batch Calculation Loop (3,500+ Staff)
+    RQ-&gt;&gt;Worker: Worker thread pulls Job #1042
+    Worker-&gt;&gt;DB: Query active staff, salary scales &amp; allowances
+    DB--&gt;&gt;Worker: Return Employee datasets
+
+    loop For each active employee
+        Worker-&gt;&gt;DB: Query Leave Ledger for unpaid LWP cuts &amp; approved encashment
+        DB--&gt;&gt;Worker: Return leave balance adjustments
+        Worker-&gt;&gt;Worker: Compute Gross Pay = Base + Cash Indemnity + Acting + Allowances ± Leave
+        Worker-&gt;&gt;Worker: Evaluate ERCA 7-tier progressive tax &amp; 7%/11% Pension
+        Worker-&gt;&gt;Worker: Deduct staff loan amortization &amp; internal cuts
+        Worker-&gt;&gt;Worker: Net Pay = Gross - (Tax + Pension + Loans)
+        Worker-&gt;&gt;DB: INSERT / UPDATE tabSalary Slip (docstatus = 0 Draft)
+    end
+
+    Worker-&gt;&gt;DB: UPDATE tabPayroll Entry status = "Pending Checker Verification"
+    Worker-&gt;&gt;UI: Trigger Real-time Desk Notification to Finance Director
+
+    %% Step 3: Maker-Checker Audit &amp; Sign-off
+    Note over Checker,DB: 3. Maker-Checker Verification &amp; Final Post
+    Checker-&gt;&gt;UI: Opens Monthly Payroll Reconciliation Variance Sheet
+    UI-&gt;&gt;API: GET /api/method/anbesa_hr.payroll.get_variance_report(batch_id)
+    API-&gt;&gt;DB: Fetch Month-over-Month comparative totals
+    DB--&gt;&gt;API: Return Variance Report
+    API--&gt;&gt;UI: Render Variance Comparison Dashboard
+    Checker-&gt;&gt;UI: Verifies totals against General Ledger &amp; clicks "Authorize &amp; Submit"
+    UI-&gt;&gt;API: POST /api/method/anbesa_hr.payroll.submit_batch(batch_id)
+    API-&gt;&gt;DB: BEGIN TRANSACTION
+    API-&gt;&gt;DB: UPDATE tabSalary Slip SET docstatus = 1 (Immutable Lock)
+    API-&gt;&gt;DB: UPDATE tabPayroll Entry SET docstatus = 1
+    API-&gt;&gt;DB: COMMIT TRANSACTION
+
+    %% Step 4: CBS Batch File Generation &amp; Downstream Handover
+    Note over API,CBS: 4. Downstream Core Banking Handover
+    API-&gt;&gt;API: Generate CBS Salary Batch Export File (CSV / Excel format)
+    API-&gt;&gt;DB: Save file URL in tabPayroll Entry.custom_cbs_export
+    API--&gt;&gt;UI: Return Success + File Download Link
+    UI--&gt;&gt;Checker: Displays Download Button for CBS File
+    Checker-&gt;&gt;UI: Downloads "LION_BANK_SALARY_2026_10.csv"
+    Checker-&gt;&gt;CBS: Manually uploads batch file into Core Banking (T24/Finacle)
+    CBS--&gt;&gt;Checker: "3,500+ Employee Accounts Credited Successfully"</code></pre>
+<hr>
+<h3 id="3-sequence-diagram-2-dual-calendar-leave-application-reliever-handover-ledger-debit">3. Sequence Diagram 2: Dual-Calendar Leave Application, Reliever Handover &amp; Ledger Debit</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Emp as 👤 Employee (ESS)
+    participant UI as 📱 Frappe Web / Mobile UI
+    participant Cal as 📅 Ethiopian Calendar Engine
+    participant Ctrl as ⚙️ Leave Controller
+    participant DB as 🗄️ MariaDB (Leave Ledger)
+    actor Reliever as 🤝 Designated Reliever
+    actor Mgr as 👔 Branch Manager (MSS)
+
+    %% Step 1: Self-Service Submission in Ethiopian Calendar
+    Note over Emp,Cal: 1. Application Submission &amp; Dual-Calendar Translation
+    Emp-&gt;&gt;UI: Selects Leave Type &amp; picks dates in Ethiopian Calendar (EC)
+    UI-&gt;&gt;Cal: translate_ec_to_gc(from_date_ec, to_date_ec)
+    Cal-&gt;&gt;Cal: Convert Ge'ez timestamps to Gregorian timestamps
+    Cal-&gt;&gt;DB: Query official Lion Bank public holiday registry
+    DB--&gt;&gt;Cal: Exclude weekend and national/religious holidays
+    Cal--&gt;&gt;UI: Return GC Dates &amp; Net Working Days Requested
+
+    UI-&gt;&gt;Ctrl: validate_balance(employee_id, leave_type_id, requested_days)
+    Ctrl-&gt;&gt;DB: Query tabLeave Ledger Entry: SUM(leaves)
+    DB--&gt;&gt;Ctrl: Current Running Balance = 14 Days
+    Ctrl--&gt;&gt;UI: Balance Valid (14 &gt;= 5 Requested)
+
+    Emp-&gt;&gt;UI: Selects Reliever (Branch Colleague) &amp; clicks "Submit Application"
+    UI-&gt;&gt;Ctrl: POST /api/method/anbesa_hr.leave.submit_application()
+    Ctrl-&gt;&gt;DB: INSERT tabLeave Application (status = "Pending Reliever", docstatus = 0)
+    Ctrl-&gt;&gt;UI: Dispatch Inbox Alert to Reliever
+
+    %% Step 2: Reliever Cash/Desk Acceptance
+    Note over Reliever,Ctrl: 2. Branch Cashier / Desk Handover Acceptance
+    Reliever-&gt;&gt;UI: Opens "Pending Reliever Endorsement" Notification
+    Reliever-&gt;&gt;UI: Verifies physical teller cash drawer / keys handover &amp; clicks "Accept"
+    UI-&gt;&gt;Ctrl: POST /api/method/anbesa_hr.leave.reliever_endorse(app_id, "Accepted")
+    Ctrl-&gt;&gt;DB: UPDATE tabLeave Application SET custom_reliever_status = "Accepted", status = "Pending Manager"
+    Ctrl-&gt;&gt;UI: Dispatch Approval Notification to Branch Manager
+
+    %% Step 3: Branch Manager Approval
+    Note over Mgr,DB: 3. Branch Manager Operational Review &amp; Sign-Off
+    Mgr-&gt;&gt;UI: Opens Manager Self-Service (MSS) Leave Inbox
+    Mgr-&gt;&gt;UI: Reviews branch operational coverage &amp; clicks "Approve"
+    UI-&gt;&gt;Ctrl: POST /api/method/anbesa_hr.leave.approve_application(app_id)
+
+    %% Step 4: Immutable Ledger Debit
+    Note over Ctrl,DB: 4. Real-Time Immutable Ledger Posting
+    Ctrl-&gt;&gt;DB: BEGIN TRANSACTION
+    Ctrl-&gt;&gt;DB: UPDATE tabLeave Application SET docstatus = 1, status = "Approved"
+    Ctrl-&gt;&gt;DB: INSERT INTO `tabLeave Ledger Entry` (employee, leave_type, transaction_type='Consumption', leaves=-5.00, docstatus=1)
+    Ctrl-&gt;&gt;DB: COMMIT TRANSACTION
+
+    Ctrl--&gt;&gt;UI: Return HTTP 200: "Leave Approved &amp; Ledger Debited"
+    UI--&gt;&gt;Emp: Push Notification: "Your leave has been approved (Remaining: 9 Days)"
+    UI--&gt;&gt;Mgr: Confirmation alert displayed</code></pre>
+<hr>
+<h3 id="4-technical-architectural-strengths-documented">4. Technical Architectural Strengths Documented</h3>
+<ol>
+<li><strong>Non-Blocking User Experience:</strong></li>
+<li>Sequence 1 proves that heavy batch calculations never freeze the browser. The web UI immediately returns a <code>200 OK</code> toast, while Redis Queue background workers handle the math.</li>
+<li><strong>Two-Man Rule (Maker-Checker) Enforcement:</strong></li>
+<li>The Payroll Officer can only generate <code>Draft</code> salary slips (<code>docstatus = 0</code>). The system strictly prevents file export until the Finance Director signs off and commits (<code>docstatus = 1</code>).</li>
+<li><strong>Banking Continuity via Reliever Endorsement:</strong></li>
+<li>Sequence 2 formally guarantees that branch operational custody (teller drawers, vault keys) is accepted by a colleague before managerial review.</li>
+<li><strong>Instant Audit Integrity via <code>tabLeave Ledger Entry</code>:</strong></li>
+<li>Every approved leave transaction results in an atomic, non-editable <code>Consumption</code> debit, keeping real-time balances permanently certified for internal audits.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/svg-pan-zoom.min.js"></script>
+      
+        <script src="../javascripts/mermaid-zoom.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

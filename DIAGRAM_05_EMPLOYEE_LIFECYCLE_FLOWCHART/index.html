@@ -1,0 +1,1316 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://abreham2112.github.io/anbesa-hrms-docs/DIAGRAM_05_EMPLOYEE_LIFECYCLE_FLOWCHART/">
+      
+      
+        <link rel="prev" href="../DIAGRAM_04_RBAC_MAKER_CHECKER_MATRIX/">
+      
+      
+        <link rel="next" href="../DIAGRAM_06_LEAVE_MANAGEMENT_FLOWCHART/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>05. Employee Lifecycle Flowchart - Anbesa HRMS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#employee-lifecycle-process-flowchart-bpmn-swimlane" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Anbesa HRMS Documentation" class="md-header__button md-logo" aria-label="Anbesa HRMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Anbesa HRMS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              05. Employee Lifecycle Flowchart
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Anbesa HRMS Documentation" class="md-nav__button md-logo" aria-label="Anbesa HRMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Anbesa HRMS Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MASTER_SDD_PACKAGE_TEMPLATE_TUESDAY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master SDD Specification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture &amp; Scope
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_01_HIGH_LEVEL_SYSTEM_ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01. High-Level System Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_02_MODULE_COMPONENT_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02. Module &amp; Component Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_03_USE_CASE_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03. Use-Case Model &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_04_RBAC_MAKER_CHECKER_MATRIX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04. RBAC &amp; Maker-Checker Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Process Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Business Process Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05. Employee Lifecycle Flowchart
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05. Employee Lifecycle Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aligned-with-ethiopian-labour-proclamation-no-11562019-banking-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aligned with Ethiopian Labour Proclamation No. 1156/2019 &amp; Banking Governance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-process-overview-banking-realities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Process Overview &amp; Banking Realities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-end-to-end-employee-lifecycle-flowchart-bpmn-swimlane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. End-to-End Employee Lifecycle Flowchart (BPMN Swimlane)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-key-operational-innovations-in-this-flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Key Operational Innovations in this Flowchart
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_06_LEAVE_MANAGEMENT_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06. Leave Management Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_07_PAYROLL_RECONCILIATION_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07. Payroll Reconciliation Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_08_PERFORMANCE_APPRAISAL_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08. Performance Appraisal Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data &amp; Database Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data &amp; Database Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_09_ENTITY_RELATIONSHIP_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09. Entity-Relationship Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_10_DATABASE_SCHEMA_DATA_DICTIONARY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Database Schema &amp; Data Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithmic &amp; Behavioral Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algorithmic &amp; Behavioral Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_11_UML_ACTIVITY_DIAGRAMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. UML Activity Diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_12_UML_SEQUENCE_DIAGRAMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. UML Sequence Diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aligned-with-ethiopian-labour-proclamation-no-11562019-banking-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aligned with Ethiopian Labour Proclamation No. 1156/2019 &amp; Banking Governance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-process-overview-banking-realities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Process Overview &amp; Banking Realities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-end-to-end-employee-lifecycle-flowchart-bpmn-swimlane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. End-to-End Employee Lifecycle Flowchart (BPMN Swimlane)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-key-operational-innovations-in-this-flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Key Operational Innovations in this Flowchart
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="employee-lifecycle-process-flowchart-bpmn-swimlane">Employee Lifecycle Process Flowchart (BPMN Swimlane)</h1>
+<h2 id="lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr">Lion International Bank Human Resource &amp; Integrated Payroll Management System (<code>anbesa_hr</code>)</h2>
+<h3 id="aligned-with-ethiopian-labour-proclamation-no-11562019-banking-governance">Aligned with Ethiopian Labour Proclamation No. 1156/2019 &amp; Banking Governance</h3>
+<hr>
+<h3 id="1-process-overview-banking-realities">1. Process Overview &amp; Banking Realities</h3>
+<p>In Lion International Bank S.C. (LIB), an employee's lifecycle is governed by strict commercial banking controls and <strong>Ethiopian Labour Proclamation No. 1156/2019</strong>. </p>
+<p>This revised workflow incorporates the verified operational realities of the bank:
+1. <strong>Onboarding &amp; Master Dossier:</strong> Bilingual data capture (English and Amharic script), 4-tier Ethiopian address hierarchy (<em>Region <span class="arithmatex">\(\rightarrow\)</span> Zone <span class="arithmatex">\(\rightarrow\)</span> Woreda <span class="arithmatex">\(\rightarrow\)</span> Kebele</em>), and assignment to one of three employee classes (<strong>Managerial</strong>, <strong>Clerical / Professional</strong>, <strong>Non-Clerical</strong>).
+2. <strong>Probation &amp; Fidelity Guarantee Gate:</strong> 45-day statutory probation. Confirmation to Permanent status strictly requires verified <strong>Personal Guarantors</strong> and signed liability undertaking letters recorded in <code>employee_guarantor</code>.
+3. <strong>Career Progression &amp; Operational Movements:</strong> Inter-branch lateral transfers, acting appointments with allowances, and performance-driven promotions.
+4. <strong>Separation &amp; Final Settlement (Labour Proclamation 1156/2019):</strong>
+   * <strong>The 4-Point Clearance Checklist:</strong> Pragmatic checklist verified by the HR Termination Officer (Branch cash/keys, IT accounts, Finance loans, Property ID badge) without over-extending system logins.
+   * <strong>Solving the 2-Week Leave Archive Pain Point:</strong> Replaces the manual paper archive and broken Excel spreadsheet reconciliation with <strong>instant 1-second Leave Ledger calculation</strong> (Positive balance <span class="arithmatex">\(\rightarrow\)</span> Taxable Earning; Negative balance <span class="arithmatex">\(\rightarrow\)</span> Wage Recovery Deduction).
+   * <strong>Statutory Severance Pay Automation:</strong> Enforces Proclamation 1156/2019 rules (<span class="arithmatex">\(&lt; 5\)</span> years service = 0 ETB severance; <span class="arithmatex">\(\ge 5\)</span> years service = statutory formula).
+   * <strong>Automated Certificate of Service &amp; Guarantor Release:</strong> One-click legal letter generation.</p>
+<hr>
+<h3 id="2-end-to-end-employee-lifecycle-flowchart-bpmn-swimlane">2. End-to-End Employee Lifecycle Flowchart (BPMN Swimlane)</h3>
+<pre class="mermaid"><code>flowchart TB
+    %% =========================================================================
+    %% PHASE 1: RECRUITMENT, PAPER DOSSIER &amp; SYSTEM ENCODING
+    %% =========================================================================
+    subgraph PHASE1["PHASE 1: Recruitment, 24-Section Paper Dossier &amp; System Encoding"]
+        direction TB
+        E1([Candidate Selected]) --&gt; E2["&lt;b&gt;Candidate / Recruit:&lt;/b&gt;&lt;br/&gt;Fills 24-Section Paper Profile Form by Pen&lt;br/&gt;(Bilingual Biodata, Parents, References, EC Dates)"]
+        E2 --&gt; E3["&lt;b&gt;Recruitment HR Officer:&lt;/b&gt;&lt;br/&gt;Verifies Degrees, Medical &amp; Criminal Clearance;&lt;br/&gt;Binds Paper File into Physical Dossier"]
+        E3 --&gt; E4["&lt;b&gt;HR Data Encoder (Maker):&lt;/b&gt;&lt;br/&gt;Encodes Profile into &lt;i&gt;anbesa_hr&lt;/i&gt; (tabEmployee):&lt;br/&gt;• Mandatory Core Fields (Name, Amharic, DOB, Branch, Account)&lt;br/&gt;• Optional Child Tables (Spouse, Children, References)"]
+        E4 --&gt; E5["&lt;b&gt;HR Director (Checker):&lt;/b&gt;&lt;br/&gt;Submits Record: Status = &lt;b&gt;Probationary (45 Days)&lt;/b&gt;"]
+    end
+
+    %% =========================================================================
+    %% PHASE 2: PROBATION &amp; FIDELITY GUARANTEE GATE
+    %% =========================================================================
+    subgraph PHASE2["PHASE 2: Banking Compliance &amp; Fidelity Guarantee Gate (45 Days)"]
+        direction TB
+        G1["&lt;b&gt;Employee &amp; HR Maker&lt;/b&gt;&lt;br/&gt;Submit Guarantor Dossier:&lt;br/&gt;• Guarantor Bio-Data &amp; Employer&lt;br/&gt;• Signed Liability Undertaking Form"]
+        G2{"HR / Legal Unit:&lt;br/&gt;Guarantor &amp; Collateral&lt;br/&gt;Verified?"}
+        G3["Record in &lt;i&gt;employee_guarantor&lt;/i&gt;&lt;br/&gt;Status: &lt;i&gt;Guarantor Approved&lt;/i&gt;"]
+        G4["Branch / Unit Manager:&lt;br/&gt;Probation Assessment (45 Days)"]
+        G5{"Assessment&lt;br/&gt;Satisfactory?"}
+        G6["&lt;b&gt;HR Director Signs Off&lt;/b&gt;&lt;br/&gt;Status Updated: &lt;b&gt;Permanent Staff&lt;/b&gt;&lt;br/&gt;Enters Regular Appraisal Cycles"]
+        G_FAIL["Extend Probation OR&lt;br/&gt;Terminate Probation Contract"]
+
+        G1 --&gt; G2
+        G2 --&gt;|Yes| G3
+        G2 --&gt;|No / Incomplete| G1
+        G3 --&gt; G4
+        G4 --&gt; G5
+        G5 --&gt;|Yes| G6
+        G5 --&gt;|No| G_FAIL
+    end
+
+    E5 --&gt; G1
+
+    %% =========================================================================
+    %% PHASE 3: CAREER OPERATIONS, TRANSFERS &amp; PROMOTIONS
+    %% =========================================================================
+    subgraph PHASE3["PHASE 3: Career Operations, Transfers &amp; Internal Mobility"]
+        direction TB
+        C_EVENT{"Operational Event"}
+
+        %% Lateral Transfer
+        subgraph TRN_FLOW["Lateral Branch Transfer"]
+            T1["Transfer Request Raised&lt;br/&gt;(Inter-Branch / HO Directorate)"]
+            T2["Branch Manager Endorsement"]
+            T3["HR Director Commits Transfer&lt;br/&gt;(Branch updated, Pay Grade preserved)"]
+            T1 --&gt; T2 --&gt; T3
+        end
+
+        %% Internal Vacancy / Promotion
+        subgraph PROM_FLOW["Promotion / Internal Vacancy Competition"]
+            P1["Internal Vacancy Announced&lt;br/&gt;(Open to Clerical &amp; Qualified Non-Clerical)"]
+            P2["System Ranks Applicants by&lt;br/&gt;&lt;b&gt;Appraisal Score (100% / 75%) + Qualifications&lt;/b&gt;"]
+            P3["HR Director Promotes Candidate&lt;br/&gt;(Elevates Grade, updates &lt;i&gt;hr_emp_salary&lt;/i&gt;)"]
+            P1 --&gt; P2 --&gt; P3
+        end
+
+        %% Disciplinary
+        subgraph DISC_FLOW["Disciplinary / Commendation"]
+            D1["Incident / Cash Shortage / Audit Discrepancy"]
+            D2["Inquiry Committee Review &amp; Formal Action"]
+            D3["Logged to Disciplinary File&lt;br/&gt;(Informs Bonus &amp; Promotion eligibility)"]
+            D1 --&gt; D2 --&gt; D3
+        end
+
+        C_EVENT --&gt;|Reassignment| T1
+        C_EVENT --&gt;|Vacancy / Merit| P1
+        C_EVENT --&gt;|Infraction / Audit| D1
+    end
+
+    G6 --&gt; C_EVENT
+
+    %% =========================================================================
+    %% PHASE 4: SEPARATION &amp; STATUTORY FINAL SETTLEMENT
+    %% =========================================================================
+    subgraph PHASE4["PHASE 4: Separation &amp; Final Settlement (Labour Proc. 1156/2019)"]
+        direction TB
+        X1["Separation Trigger:&lt;br/&gt;&lt;b&gt;Voluntary Resignation (1-Month Notice)&lt;/b&gt;&lt;br/&gt;OR Retirement / Termination"]
+
+        %% 4-Point Checklist
+        subgraph CLEARANCE_BOX["HR Operational Clearance Checklist (Single Form)"]
+            direction TB
+            CHK1["☑ &lt;b&gt;Branch / Dept:&lt;/b&gt; Cash drawer balanced, vault keys &amp; stamps returned"]
+            CHK2["☑ &lt;b&gt;IT Directorate:&lt;/b&gt; CBS user disabled, email &amp; laptop surrendered"]
+            CHK3["☑ &lt;b&gt;Finance Directorate:&lt;/b&gt; Staff loans &amp; advances reconciled"]
+            CHK4["☑ &lt;b&gt;Property Admin:&lt;/b&gt; Bank ID card &amp; bank assets returned"]
+            CHK_ATTACH["📎 &lt;b&gt;HR Officer Attaches Scanned Signed Clearance Form&lt;/b&gt;"]
+            CHK1 --- CHK2 --- CHK3 --- CHK4 --- CHK_ATTACH
+        end
+
+        X1 --&gt; CLEARANCE_BOX
+
+        %% Leave Ledger Instant Reconciliation
+        subgraph LEAVE_RECON_BOX["Instant Leave Ledger Reconciliation (Replaces 2-Week Archive Search)"]
+            direction TB
+            L_FETCH["&lt;b&gt;HR Officer Clicks 'Fetch Leave Balance'&lt;/b&gt;&lt;br/&gt;&lt;i&gt;System queries Leave Ledger Entry in 1 millisecond&lt;/i&gt;"]
+            L_CHECK{"Reconciled Balance&lt;br/&gt;Positive or Negative?"}
+            L_POS["&lt;b&gt;Positive Days (+):&lt;/b&gt;&lt;br/&gt;Computed as &lt;b&gt;Leave Encashment Earning (ETB)&lt;/b&gt;&lt;br/&gt;Formula: (Base Salary / 30) × Unused Days"]
+            L_NEG["&lt;b&gt;Negative Days (-):&lt;/b&gt;&lt;br/&gt;Computed as &lt;b&gt;Wage Recovery Deduction (ETB)&lt;/b&gt;&lt;br/&gt;Formula: (Base Salary / 30) × Overdrawn Days"]
+
+            L_FETCH --&gt; L_CHECK
+            L_CHECK --&gt;|Balance &gt; 0| L_POS
+            L_CHECK --&gt;|Balance &lt; 0| L_NEG
+        end
+
+        CLEARANCE_BOX --&gt; LEAVE_RECON_BOX
+
+        %% Severance Rule Proc 1156/2019
+        subgraph SEVERANCE_BOX["Statutory Severance Pay (Proc. 1156/2019)"]
+            direction TB
+            SEV_CHECK{"Voluntary Resignation Tenure?"}
+            SEV_ZERO["&lt;b&gt;Tenure &lt; 5 Years:&lt;/b&gt;&lt;br/&gt;Severance Pay = &lt;b&gt;0 ETB&lt;/b&gt;&lt;br/&gt;(Statutory rule under Proc. 1156/2019)"]
+            SEV_CALC["&lt;b&gt;Tenure ≥ 5 Years:&lt;/b&gt;&lt;br/&gt;Severance Pay Calculated&lt;br/&gt;per Statutory Proclamation Formula"]
+
+            SEV_CHECK --&gt;|&lt; 5 Years| SEV_ZERO
+            SEV_CHECK --&gt;|≥ 5 Years| SEV_CALC
+        end
+
+        L_POS --&gt; SEVERANCE_BOX
+        L_NEG --&gt; SEVERANCE_BOX
+
+        %% Final Settlement &amp; Letters
+        subgraph FINAL_EXEC["Final Settlement &amp; Statutory Handover"]
+            direction TB
+            NET_SETTLE["&lt;b&gt;Net Final Settlement Slip:&lt;/b&gt;&lt;br/&gt;Net = ± Leave Reconciled + Severance + PF - Loan Balance"]
+            FIN_PAY["Finance Releases Final Net Settlement via CBS"]
+            DOC_CERT["&lt;b&gt;1-Click Document Generation:&lt;/b&gt;&lt;br/&gt;• Statutory Certificate of Service (Work Experience)&lt;br/&gt;• Formal Guarantor Discharge &amp; Release Letter"]
+            STATUS_SEP["HR Director Marks Employee: &lt;b&gt;Separated&lt;/b&gt;&lt;br/&gt;Dossier Safely Archived"]
+
+            NET_SETTLE --&gt; FIN_PAY --&gt; DOC_CERT --&gt; STATUS_SEP
+        end
+
+        SEVERANCE_BOX --&gt; NET_SETTLE
+        STATUS_SEP --&gt; X_STOP([Staff Lifecycle Formally Concluded])
+    end
+
+    T3 -.-&gt;|Operational Life Continues| C_EVENT
+    P3 -.-&gt;|Operational Life Continues| C_EVENT
+    D3 -.-&gt;|Severe Cause / Dismissal| X1
+    C_EVENT --&gt;|Resignation Submitted| X1
+
+    %% Visual Styling
+    style PHASE1 fill:#EBF5FB,stroke:#2980B9,stroke-width:2px,color:#1B4F72
+    style PHASE2 fill:#FEF9E7,stroke:#D4AC0D,stroke-width:2px,color:#7D6608
+    style PHASE3 fill:#F4ECF7,stroke:#8E44AD,stroke-width:2px,color:#512E5F
+    style PHASE4 fill:#EAEDED,stroke:#7F8C8D,stroke-width:2px,color:#2C3E50
+    style CLEARANCE_BOX fill:#FFFFFF,stroke:#2980B9,stroke-width:1.5px,color:#1B4F72
+    style LEAVE_RECON_BOX fill:#FFFFFF,stroke:#27AE60,stroke-width:2px,color:#145A32
+    style SEVERANCE_BOX fill:#FFFFFF,stroke:#D35400,stroke-width:1.5px,color:#78281F
+    style FINAL_EXEC fill:#FFFFFF,stroke:#16A085,stroke-width:1.5px,color:#0E6251
+    style G6 fill:#D4EFDF,stroke:#27AE60,stroke-width:2px,color:#145A32
+    style X_STOP fill:#FADBD8,stroke:#C0392B,stroke-width:2px,color:#78281F</code></pre>
+<hr>
+<h3 id="3-key-operational-innovations-in-this-flowchart">3. Key Operational Innovations in this Flowchart</h3>
+<ol>
+<li><strong>45-Day Statutory Probation &amp; Guarantor Gate:</strong> Matches Ethiopian banking reality—permanent confirmation occurs only after guarantor verification.</li>
+<li><strong>Pragmatic 4-Point Clearance Checklist:</strong> Avoids system over-extension. The HR Officer checks off Branch, IT, Finance, and Property clearance and attaches the single signed physical form.</li>
+<li><strong>Instant Leave Reconciliation (Solving the 2-Week Archive Crisis):</strong></li>
+<li>Eliminates the week-long archive search.</li>
+<li><code>Leave Ledger Entry</code> outputs the verified balance in 1 millisecond.</li>
+<li>Reconciles positive days into Birr encashment earnings, and negative overdrawn days into payroll deductions.</li>
+<li><strong>Labour Proclamation No. 1156/2019 Severance Enforcement:</strong></li>
+<li>Automatically assigns 0 ETB severance for voluntary resignations with <span class="arithmatex">\(&lt; 5\)</span> years service.</li>
+<li>Calculates statutory severance for <span class="arithmatex">\(\ge 5\)</span> years service.</li>
+<li><strong>Automated Statutory Legal Documents:</strong> One-click generation of the <strong>Certificate of Service</strong> and <strong>Guarantor Discharge Letter</strong>.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/svg-pan-zoom.min.js"></script>
+      
+        <script src="../javascripts/mermaid-zoom.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

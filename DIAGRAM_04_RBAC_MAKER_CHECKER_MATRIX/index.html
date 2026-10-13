@@ -1,0 +1,1590 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://abreham2112.github.io/anbesa-hrms-docs/DIAGRAM_04_RBAC_MAKER_CHECKER_MATRIX/">
+      
+      
+        <link rel="prev" href="../DIAGRAM_03_USE_CASE_DIAGRAM/">
+      
+      
+        <link rel="next" href="../DIAGRAM_05_EMPLOYEE_LIFECYCLE_FLOWCHART/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>04. RBAC &amp; Maker-Checker Matrix - Anbesa HRMS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#role-based-access-control-rbac-maker-checker-governance-matrix" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Anbesa HRMS Documentation" class="md-header__button md-logo" aria-label="Anbesa HRMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Anbesa HRMS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              04. RBAC &amp; Maker-Checker Matrix
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Anbesa HRMS Documentation" class="md-nav__button md-logo" aria-label="Anbesa HRMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Anbesa HRMS Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MASTER_SDD_PACKAGE_TEMPLATE_TUESDAY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master SDD Specification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture &amp; Scope
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_01_HIGH_LEVEL_SYSTEM_ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01. High-Level System Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_02_MODULE_COMPONENT_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02. Module &amp; Component Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_03_USE_CASE_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03. Use-Case Model &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04. RBAC &amp; Maker-Checker Matrix
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04. RBAC &amp; Maker-Checker Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-executive-summary-banking-governance-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Executive Summary &amp; Banking Governance Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-the-banking-maker-checker-workflow-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Banking Maker-Checker Workflow Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bank-system-roles-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bank System Roles Catalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-comprehensive-rbac-permission-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Comprehensive RBAC Permission Matrix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Comprehensive RBAC Permission Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission Legend:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-high-risk-banking-workflows-maker-checker-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. High-Risk Banking Workflows: Maker-Checker Governance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Process Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Business Process Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_05_EMPLOYEE_LIFECYCLE_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05. Employee Lifecycle Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_06_LEAVE_MANAGEMENT_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06. Leave Management Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_07_PAYROLL_RECONCILIATION_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07. Payroll Reconciliation Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_08_PERFORMANCE_APPRAISAL_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08. Performance Appraisal Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data &amp; Database Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data &amp; Database Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_09_ENTITY_RELATIONSHIP_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09. Entity-Relationship Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_10_DATABASE_SCHEMA_DATA_DICTIONARY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Database Schema &amp; Data Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithmic &amp; Behavioral Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algorithmic &amp; Behavioral Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_11_UML_ACTIVITY_DIAGRAMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. UML Activity Diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_12_UML_SEQUENCE_DIAGRAMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. UML Sequence Diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-executive-summary-banking-governance-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Executive Summary &amp; Banking Governance Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-the-banking-maker-checker-workflow-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Banking Maker-Checker Workflow Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bank-system-roles-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bank System Roles Catalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-comprehensive-rbac-permission-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Comprehensive RBAC Permission Matrix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Comprehensive RBAC Permission Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission Legend:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-high-risk-banking-workflows-maker-checker-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. High-Risk Banking Workflows: Maker-Checker Governance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="role-based-access-control-rbac-maker-checker-governance-matrix">Role-Based Access Control (RBAC) &amp; Maker-Checker Governance Matrix</h1>
+<h2 id="lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr">Lion International Bank Human Resource &amp; Integrated Payroll Management System (<code>anbesa_hr</code>)</h2>
+<hr>
+<h3 id="1-executive-summary-banking-governance-principles">1. Executive Summary &amp; Banking Governance Principles</h3>
+<p>In commercial banking, access control is governed by strict compliance mandates from the <strong>National Bank of Ethiopia (NBE)</strong>, external auditors, and internal risk management policies. </p>
+<p>The security architecture of <strong>LIBHRMS (<code>anbesa_hr</code>)</strong> is built on three core pillars:
+1. <strong>Role-Based Access Control (RBAC):</strong> Privileges are assigned to roles, never individual users. All bank users inherit the base <strong><code>Employee</code></strong> role, while administrative privileges are additive.
+2. <strong>Segregation of Duties (SoD) &amp; Maker-Checker Principle:</strong> High-risk transactions (salary scale adjustments, promotions, disciplinary terminations, and monthly payroll disbursement) cannot be executed by a single individual. The person who drafts a transaction (<strong>The Maker</strong>) can never be the person who finalizes and authorizes it (<strong>The Checker</strong>).
+3. <strong>Branch-Level Data Isolation (Row-Level Security):</strong> Branch Managers and local supervisors are restricted via Frappe User Permissions to view and act upon <em>only</em> employees assigned to their specific Branch / Department. Head Office HR and Finance maintain bank-wide visibility.</p>
+<hr>
+<h3 id="2-the-banking-maker-checker-workflow-architecture">2. The Banking Maker-Checker Workflow Architecture</h3>
+<pre class="mermaid"><code>flowchart LR
+    %% =========================================================================
+    %% MAKER-CHECKER WORKFLOW STATE MACHINE
+    %% =========================================================================
+
+    subgraph STAGE_MAKER["1. Preparation Stage (Maker)"]
+        direction TB
+        ROLE_MAKER["👤 &lt;b&gt;Maker / Initiator&lt;/b&gt;&lt;br/&gt;• Employee (Leave/Self-Appraisal)&lt;br/&gt;• HR Officer (Transfers/Guarantor)&lt;br/&gt;• Payroll Officer (Salary Runs)"]
+        DRAFT["📄 &lt;b&gt;Draft Record&lt;/b&gt;&lt;br/&gt;(docstatus = 0)&lt;br/&gt;Editable, unposted, validates business rules"]
+        ROLE_MAKER --&gt;|Creates &amp; Submits| DRAFT
+    end
+
+    subgraph STAGE_CHECKER["2. Verification Stage (Checker)"]
+        direction TB
+        ROLE_CHECKER["👔 &lt;b&gt;Checker / Approver&lt;/b&gt;&lt;br/&gt;• Branch Manager (Leave/Appraisal)&lt;br/&gt;• HR Director (Promotions/Exit)&lt;br/&gt;• Finance Director (Payroll &amp; CBS)"]
+        AUDIT_CHECK{"Audit &amp;&lt;br/&gt;Policy Check"}
+        DRAFT --&gt;|Routes via Workflow| ROLE_CHECKER
+        ROLE_CHECKER --&gt; AUDIT_CHECK
+    end
+
+    subgraph STAGE_COMMITTED["3. Authorization Stage (Final Post)"]
+        direction TB
+        COMMITTED["🔒 &lt;b&gt;Submitted &amp; Immutable&lt;/b&gt;&lt;br/&gt;(docstatus = 1)&lt;br/&gt;Locked against tampering; audit trail recorded"]
+        REJECTED["❌ &lt;b&gt;Rejected / Returned&lt;/b&gt;&lt;br/&gt;Returned to Maker with mandatory remarks"]
+
+        AUDIT_CHECK --&gt;|Approved &amp; Signed Off| COMMITTED
+        AUDIT_CHECK --&gt;|Discrepancy Found| REJECTED
+    end
+
+    subgraph STAGE_DOWNSTREAM["4. Downstream Execution"]
+        direction TB
+        CBS_POST["&lt;b&gt;CBS Batch Export File&lt;/b&gt;&lt;br/&gt;(ETB Salary Credit)"]
+        AUDIT_LOG["&lt;b&gt;Bank Audit Trail&lt;/b&gt;&lt;br/&gt;(Immutable Log)"]
+        COMMITTED --&gt; CBS_POST
+        COMMITTED --&gt; AUDIT_LOG
+    end
+
+    %% Visual Styling
+    style STAGE_MAKER fill:#EBF5FB,stroke:#2980B9,stroke-width:2px,color:#1B4F72
+    style STAGE_CHECKER fill:#FEF9E7,stroke:#D4AC0D,stroke-width:2px,color:#7D6608
+    style STAGE_COMMITTED fill:#E8F8F5,stroke:#16A085,stroke-width:2px,color:#0E6251
+    style STAGE_DOWNSTREAM fill:#F4ECF7,stroke:#8E44AD,stroke-width:2px,color:#512E5F
+    style COMMITTED fill:#D4EFDF,stroke:#27AE60,stroke-width:2px,color:#145A32
+    style REJECTED fill:#FADBD8,stroke:#C0392B,stroke-width:2px,color:#78281F</code></pre>
+<hr>
+<h3 id="3-bank-system-roles-catalog">3. Bank System Roles Catalog</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Role Name</th>
+<th style="text-align: left;">Scope of Visibility</th>
+<th style="text-align: left;">Core Responsibilities in System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Employee (Base ESS)</strong></td>
+<td style="text-align: left;">Self-Only (<code>owner = user</code>)</td>
+<td style="text-align: left;">Universal base role. View payslips, submit leave, self-appraisal, update bio-data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Branch / Line Manager (MSS)</strong></td>
+<td style="text-align: left;">Direct Branch / Team Only</td>
+<td style="text-align: left;">Approves leave, conducts performance evaluations, endorses transfer/acting requests.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. HR Operations Officer (Maker)</strong></td>
+<td style="text-align: left;">Bank-wide (Head Office &amp; Branches)</td>
+<td style="text-align: left;">Prepares employee master dossiers, guarantor forms, transfers, and training history.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. HR Director / Manager (Checker)</strong></td>
+<td style="text-align: left;">Bank-wide</td>
+<td style="text-align: left;">Authorizes employee promotions, salary scale steps, disciplinary actions, and exit clearance.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5. Payroll Officer (Maker)</strong></td>
+<td style="text-align: left;">Bank-wide</td>
+<td style="text-align: left;">Configures salary components, processes monthly payroll batches, reconciles tax/pension.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>6. Finance Director / Checker</strong></td>
+<td style="text-align: left;">Bank-wide</td>
+<td style="text-align: left;">Verifies payroll calculations, authorizes final salary run, signs off on <strong>CBS Batch Export File</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>7. System Administrator</strong></td>
+<td style="text-align: left;">Technical System Configuration</td>
+<td style="text-align: left;">Manages user accounts, assigns roles, configures Ethiopian calendar and system backups.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>8. Internal Auditor</strong></td>
+<td style="text-align: left;">Bank-wide (Strictly Read-Only)</td>
+<td style="text-align: left;">Comprehensive view-only access across all HR dossiers, payroll runs, and audit logs.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="4-comprehensive-rbac-permission-matrix">4. Comprehensive RBAC Permission Matrix</h3>
+<h4 id="permission-legend">Permission Legend:</h4>
+<ul>
+<li><strong>C:</strong> Create (Draft new record)</li>
+<li><strong>R:</strong> Read (View records)</li>
+<li><strong>U:</strong> Update (Edit draft records)</li>
+<li><strong>D:</strong> Delete (Purge records — <em>strictly locked down in banking</em>)</li>
+<li><strong>S:</strong> Submit (Freeze record into immutable posted state)</li>
+<li><strong>X:</strong> Cancel / Amend (Void a submitted record with an audit reason)</li>
+<li><strong>E:</strong> Export (Download to Excel / CSV / PDF)</li>
+<li><strong><code>[Own]</code></strong>: Restricted strictly to records where the employee is the record owner.</li>
+<li><strong><code>[Branch]</code></strong>: Restricted strictly to employees within the manager's assigned branch.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Functional Subsystem / DocType</th>
+<th style="text-align: center;">1. Employee (ESS)</th>
+<th style="text-align: center;">2. Branch Manager</th>
+<th style="text-align: center;">3. HR Officer (Maker)</th>
+<th style="text-align: center;">4. HR Director (Checker)</th>
+<th style="text-align: center;">5. Payroll Officer</th>
+<th style="text-align: center;">6. Finance Director</th>
+<th style="text-align: center;">7. Sys Admin</th>
+<th style="text-align: center;">8. Internal Auditor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Employee Master Dossier</strong></td>
+<td style="text-align: center;">R <code>[Own]</code></td>
+<td style="text-align: center;">R <code>[Branch]</code></td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, U, S</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R, E</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Amharic Bio-Data &amp; Address</strong></td>
+<td style="text-align: center;">R, U <code>[Own]</code></td>
+<td style="text-align: center;">R <code>[Branch]</code></td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, U, S</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Guarantor &amp; Collateral</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, U, S</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R, E</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Branch Transfers (Lateral)</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R, U (Endorse)</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S, X</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Promotions &amp; Grade Changes</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S, X</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Disciplinary &amp; Commendations</strong></td>
+<td style="text-align: center;">R <code>[Own]</code></td>
+<td style="text-align: center;">C, R (Incident)</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S, X</td>
+<td style="text-align: center;">R (Cuts)</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R, E</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Exit Clearance Checklist</strong></td>
+<td style="text-align: center;">R <code>[Own]</code></td>
+<td style="text-align: center;">R, U (Branch Sign)</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S, X</td>
+<td style="text-align: center;">R (Loan Cut)</td>
+<td style="text-align: center;">R (Clear)</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R, E</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Leave Application</strong></td>
+<td style="text-align: center;">C, R, U <code>[Own]</code></td>
+<td style="text-align: center;">R, U, S <code>[Branch]</code></td>
+<td style="text-align: center;">R, U, S</td>
+<td style="text-align: center;">R, S, X</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Leave Allocation &amp; Policy</strong></td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S, X</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Unused Leave Encashment</strong></td>
+<td style="text-align: center;">R <code>[Own]</code></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Salary Structure &amp; Scales</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R (Endorse)</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S, X</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R, E</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Monthly Salary Slip</strong></td>
+<td style="text-align: center;">R <code>[Own]</code>, E</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R, E</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Payroll Entry (Monthly Batch)</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S, X</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R, E</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CBS Salary Export File</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C, R (Preview)</td>
+<td style="text-align: center;"><strong>R, S, E (Sign-Off)</strong></td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R, E</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Appraisal Self-Evaluation</strong></td>
+<td style="text-align: center;">C, R, U <code>[Own]</code></td>
+<td style="text-align: center;">R <code>[Branch]</code></td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Manager Appraisal Review</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C, R, U, S <code>[Branch]</code></td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R, S (Calibrate)</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Training History &amp; Bond</strong></td>
+<td style="text-align: center;">R <code>[Own]</code></td>
+<td style="text-align: center;">R <code>[Branch]</code></td>
+<td style="text-align: center;">C, R, U</td>
+<td style="text-align: center;">R, S</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ethiopian Calendar &amp; Holidays</strong></td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">C, R, U, S</td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>System User &amp; RBAC Setup</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C, R, U, S</td>
+<td style="text-align: center;">R, E</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Audit Trails &amp; Change Logs</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;"><strong>R, E</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="5-high-risk-banking-workflows-maker-checker-governance">5. High-Risk Banking Workflows: Maker-Checker Governance</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">High-Risk Transaction</th>
+<th style="text-align: left;">The Maker (Initiator)</th>
+<th style="text-align: left;">The Checker (Authorizer)</th>
+<th style="text-align: left;">Mandatory Control / Safeguard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Monthly Payroll Disbursement</strong></td>
+<td style="text-align: left;"><strong>Payroll Officer</strong><br>Prepares calculations, verifies deductions, checks attendance/unpaid leave.</td>
+<td style="text-align: left;"><strong>Finance Director</strong><br>Reconciles bank-wide totals against general ledger, signs off on and exports the <strong>CBS Batch File</strong>.</td>
+<td style="text-align: left;">The Payroll Officer cannot export the final CBS file without the Finance Director's formal digital submission (<code>docstatus = 1</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Staff Promotion &amp; Salary Increment</strong></td>
+<td style="text-align: left;"><strong>HR Operations Officer</strong><br>Drafts promotion details based on approved appraisal ratings and vacant positions.</td>
+<td style="text-align: left;"><strong>HR Director</strong><br>Verifies budget allocation, approves pay scale step, and officially commits the promotion.</td>
+<td style="text-align: left;">Automated system rule prevents retroactive increments without Board/Executive committee reference number.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Employee Resignation &amp; Exit Clearance</strong></td>
+<td style="text-align: left;"><strong>Department / Branch Manager</strong><br>Signs off branch property, office keys, and cashier cash register handover.</td>
+<td style="text-align: left;"><strong>HR Director &amp; Finance Officer</strong><br>Confirms loan settlement, releases fidelity guarantor liability, and approves final severance payout.</td>
+<td style="text-align: left;">Employee status cannot transition to "Terminated" while any clearance sign-off checkpoint remains pending.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. Fidelity Guarantor Registration</strong></td>
+<td style="text-align: left;"><strong>HR Operations Officer</strong><br>Inputs guarantor personal details and scans collateral letters.</td>
+<td style="text-align: left;"><strong>HR Director / Legal Unit</strong><br>Verifies physical guarantor undertaking letters against employer bank confirmation.</td>
+<td style="text-align: left;">An employee on probation cannot be converted to Permanent without an approved Guarantor record.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5. Unused Leave Birr Encashment</strong></td>
+<td style="text-align: left;"><strong>HR Operations Officer</strong><br>Calculates monetary value using the standard daily wage formula.</td>
+<td style="text-align: left;"><strong>Finance Officer</strong><br>Verifies tax calculation and includes the encashed amount in the monthly payroll batch.</td>
+<td style="text-align: left;">Encashment requests are validated against the immutable Leave Ledger before being released to Payroll.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/svg-pan-zoom.min.js"></script>
+      
+        <script src="../javascripts/mermaid-zoom.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

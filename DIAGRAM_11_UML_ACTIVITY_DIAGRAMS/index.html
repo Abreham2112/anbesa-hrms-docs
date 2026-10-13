@@ -1,0 +1,1407 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://abreham2112.github.io/anbesa-hrms-docs/DIAGRAM_11_UML_ACTIVITY_DIAGRAMS/">
+      
+      
+        <link rel="prev" href="../DIAGRAM_10_DATABASE_SCHEMA_DATA_DICTIONARY/">
+      
+      
+        <link rel="next" href="../DIAGRAM_12_UML_SEQUENCE_DIAGRAMS/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>11. UML Activity Diagrams - Anbesa HRMS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uml-activity-diagrams-algorithmic-execution-specifications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Anbesa HRMS Documentation" class="md-header__button md-logo" aria-label="Anbesa HRMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Anbesa HRMS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              11. UML Activity Diagrams
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Anbesa HRMS Documentation" class="md-nav__button md-logo" aria-label="Anbesa HRMS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Anbesa HRMS Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MASTER_SDD_PACKAGE_TEMPLATE_TUESDAY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master SDD Specification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture &amp; Scope
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_01_HIGH_LEVEL_SYSTEM_ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01. High-Level System Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_02_MODULE_COMPONENT_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02. Module &amp; Component Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_03_USE_CASE_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03. Use-Case Model &amp; Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_04_RBAC_MAKER_CHECKER_MATRIX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04. RBAC &amp; Maker-Checker Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Process Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Business Process Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_05_EMPLOYEE_LIFECYCLE_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05. Employee Lifecycle Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_06_LEAVE_MANAGEMENT_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06. Leave Management Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_07_PAYROLL_RECONCILIATION_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07. Payroll Reconciliation Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_08_PERFORMANCE_APPRAISAL_FLOWCHART/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08. Performance Appraisal Flowchart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data &amp; Database Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data &amp; Database Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_09_ENTITY_RELATIONSHIP_DIAGRAM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09. Entity-Relationship Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_10_DATABASE_SCHEMA_DATA_DICTIONARY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Database Schema &amp; Data Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithmic &amp; Behavioral Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algorithmic &amp; Behavioral Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. UML Activity Diagrams
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. UML Activity Diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-behavioral-logic-for-complex-banking-computational-engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formal Behavioral Logic for Complex Banking Computational Engines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-purpose-uml-modeling-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose &amp; UML Modeling Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-activity-diagram-1-dual-calendar-leave-accrual-birr-encashment-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Activity Diagram 1: Dual-Calendar Leave Accrual &amp; Birr Encashment Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-activity-diagram-2-asynchronous-payroll-batch-execution-statutory-deductions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Activity Diagram 2: Asynchronous Payroll Batch Execution &amp; Statutory Deductions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-technical-precision-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technical Precision Breakdown
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Technical Precision Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-erca-progressive-tax-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The ERCA Progressive Tax Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-forkjoin-concurrency-in-earnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fork/Join Concurrency in Earnings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGRAM_12_UML_SEQUENCE_DIAGRAMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. UML Sequence Diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lion International Bank Human Resource &amp; Integrated Payroll Management System (anbesa_hr)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formal-behavioral-logic-for-complex-banking-computational-engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formal Behavioral Logic for Complex Banking Computational Engines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-purpose-uml-modeling-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose &amp; UML Modeling Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-activity-diagram-1-dual-calendar-leave-accrual-birr-encashment-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Activity Diagram 1: Dual-Calendar Leave Accrual &amp; Birr Encashment Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-activity-diagram-2-asynchronous-payroll-batch-execution-statutory-deductions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Activity Diagram 2: Asynchronous Payroll Batch Execution &amp; Statutory Deductions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-technical-precision-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technical Precision Breakdown
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Technical Precision Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-erca-progressive-tax-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The ERCA Progressive Tax Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-forkjoin-concurrency-in-earnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fork/Join Concurrency in Earnings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="uml-activity-diagrams-algorithmic-execution-specifications">UML Activity Diagrams: Algorithmic Execution Specifications</h1>
+<h2 id="lion-international-bank-human-resource-integrated-payroll-management-system-anbesa_hr">Lion International Bank Human Resource &amp; Integrated Payroll Management System (<code>anbesa_hr</code>)</h2>
+<h3 id="formal-behavioral-logic-for-complex-banking-computational-engines">Formal Behavioral Logic for Complex Banking Computational Engines</h3>
+<hr>
+<h3 id="1-purpose-uml-modeling-context">1. Purpose &amp; UML Modeling Context</h3>
+<p>While high-level business flowcharts model operational human handoffs across departments, <strong>UML Activity Diagrams</strong> model the <strong>internal algorithmic behavior, decision branching, mathematical calculations, and parallel concurrency</strong> executed by system services and database engines.</p>
+<p>For <strong>LIBHRMS (<code>anbesa_hr</code>)</strong>, this document provides the formal activity logic for the <strong>two most computationally complex banking engines</strong>:
+1. <strong>Activity Diagram 1: Dual-Calendar Statutory Leave Accrual &amp; Birr Encashment Engine:</strong>
+   * Calculates tenure-based statutory annual leave accrual (<span class="arithmatex">\(16 + \lfloor\frac{\text{Years}}{2}\rfloor\)</span>).
+   * Executes dual-calendar synchronization (Gregorian GC <span class="arithmatex">\(\leftrightarrow\)</span> Ethiopian EC).
+   * Executes exact monetary valuation in Ethiopian Birr: <span class="arithmatex">\(\text{Daily Wage} = \frac{\text{Base}}{30} \times \text{Days}\)</span>.
+   * Commits immutable debits/credits to <code>tabLeave Ledger Entry</code>.
+2. <strong>Activity Diagram 2: Asynchronous Monthly Payroll Batch Execution &amp; Statutory Deduction Engine:</strong>
+   * Redis Queue background task dispatching.
+   * Concurrent processing of banking allowances (Teller Cash Indemnity, Acting allowances, Transport).
+   * Exact evaluation of the <strong>Ethiopian Ministry of Revenues (ERCA) 7-Tier Progressive Tax Schedule</strong>.
+   * Computation of <span class="arithmatex">\(7\%\)</span> employee pension and <span class="arithmatex">\(11\%\)</span> bank expense liability.
+   * Loan amortization deductions and automated compilation of the <strong>CBS Salary Batch Export File</strong>.</p>
+<hr>
+<h3 id="2-activity-diagram-1-dual-calendar-leave-accrual-birr-encashment-engine">2. Activity Diagram 1: Dual-Calendar Leave Accrual &amp; Birr Encashment Engine</h3>
+<pre class="mermaid"><code>flowchart TD
+    %% =========================================================================
+    %% ACTIVITY DIAGRAM 1: LEAVE ACCRUAL, EXPIRATION &amp; BIDIRECTIONAL SETTLEMENT
+    %% =========================================================================
+
+    START([● Initial Node: Trigger Event]) --&gt; CHECK_TRIGGER{"Trigger Type?"}
+
+    %% Branch A: Fiscal Year Allocation &amp; Expiration (Hamle 1)
+    CHECK_TRIGGER --&gt;|Annual Fiscal Run: Hamle 1| CALC_TENURE["Query tabEmployee.date_of_joining&lt;br/&gt;Calculate Total Banking Tenure in Months"]
+    CALC_TENURE --&gt; EVAL_SENIORITY["Calculate New Year Statutory Entitlement:&lt;br/&gt;Base = 16 Working Days&lt;br/&gt;Bonus = floor(Years of Service / 2) Days (Unlimited Increments)&lt;br/&gt;Current Year Entitlement = Base + Bonus"]
+
+    EVAL_SENIORITY --&gt; CHECK_EXPIRATION["&lt;b&gt;Evaluate 2-Year Expiration Rule (Proc. 1156/2019):&lt;/b&gt;&lt;br/&gt;Query Unused Leave older than 2 Fiscal Cycles (Year N - 2)"]
+    CHECK_EXPIRATION --&gt; HAS_EXPIRED{"Any Leave Older&lt;br/&gt;than 2 Years?"}
+
+    HAS_EXPIRED --&gt;|Yes| POST_EXPIRE["Post Forfeiture to tabLeave Ledger Entry:&lt;br/&gt;transaction_type = 'Expiration'&lt;br/&gt;leaves = -Expired_Days (Forfeited)"]
+    HAS_EXPIRED --&gt;|No| POST_ALLOC["Post Credit to tabLeave Ledger Entry:&lt;br/&gt;transaction_type = 'Allocation'&lt;br/&gt;leaves = +Current_Year_Days"]
+    POST_EXPIRE --&gt; POST_ALLOC
+    POST_ALLOC --&gt; STOP_ALLOC([◉ Activity Final: Allocation &amp; Expiration Complete])
+
+    %% Branch B: Exit Settlement (Termination Reconciliation)
+    CHECK_TRIGGER --&gt;|Termination Trigger: Exit Settlement| QUERY_BALANCE["Query tabLeave Ledger Entry for Employee:&lt;br/&gt;Reconciled Balance = SUM(leaves)"]
+    QUERY_BALANCE --&gt; CHECK_BAL_SIGN{"Reconciled Balance&lt;br/&gt;Positive or Negative?"}
+
+    %% B1: Positive Balance
+    CHECK_BAL_SIGN --&gt;|Balance &gt; 0 Positive| COMPUTE_ENCASH["&lt;b&gt;Positive Balance: Bank Pays Employee&lt;/b&gt;&lt;br/&gt;Daily Wage Rate = Base Salary / 30.00&lt;br/&gt;Encashment Earning (ETB) = Daily Rate × Unused Days"]
+    COMPUTE_ENCASH --&gt; POST_DEBIT_ENCASH["Post to tabLeave Ledger Entry:&lt;br/&gt;transaction_type = 'Encashment'&lt;br/&gt;leaves = -Unused_Days"]
+    POST_DEBIT_ENCASH --&gt; PUSH_PAY_EARN["Push to Final Settlement Slip:&lt;br/&gt;&lt;b&gt;custom_leave_rec_etb = +Encashment (Taxable Earning)&lt;/b&gt;"]
+    PUSH_PAY_EARN --&gt; STOP_POS([◉ Activity Final: Positive Encashment Added to Settlement])
+
+    %% B2: Negative Balance
+    CHECK_BAL_SIGN --&gt;|Balance &lt; 0 Negative| COMPUTE_RECOVERY["&lt;b&gt;Negative Balance: Employee Pays Bank&lt;/b&gt;&lt;br/&gt;Daily Wage Rate = Base Salary / 30.00&lt;br/&gt;Wage Recovery (ETB) = Daily Rate × abs(Negative Days)"]
+    COMPUTE_RECOVERY --&gt; POST_CREDIT_RECOVERY["Post to tabLeave Ledger Entry:&lt;br/&gt;transaction_type = 'Wage Recovery Settlement'&lt;br/&gt;leaves = +abs(Negative Days) (Balances Ledger to 0)"]
+    POST_CREDIT_RECOVERY --&gt; PUSH_PAY_DEDUCT["Push to Final Settlement Slip:&lt;br/&gt;&lt;b&gt;custom_leave_rec_etb = -Wage Recovery (Payroll Deduction)&lt;/b&gt;&lt;br/&gt;(Deducted from Final Payout / Billed to Staff)"]
+    PUSH_PAY_DEDUCT --&gt; STOP_NEG([◉ Activity Final: Negative Recovery Deducted from Settlement])
+
+    %% B3: Zero Balance
+    CHECK_BAL_SIGN --&gt;|Balance = 0 Neutral| ZERO_ADJ["Zero Adjustment: Leave is fully balanced"]
+    ZERO_ADJ --&gt; STOP_ZERO([◉ Activity Final: Zero Impact on Settlement])
+
+    %% Visual Styling
+    style START fill:#2C3E50,stroke:#2C3E50,color:#FFFFFF
+    style STOP_ALLOC fill:#2C3E50,stroke:#2C3E50,color:#FFFFFF
+    style STOP_POS fill:#27AE60,stroke:#27AE60,color:#FFFFFF
+    style STOP_NEG fill:#C0392B,stroke:#C0392B,color:#FFFFFF
+    style STOP_ZERO fill:#7F8C8D,stroke:#7F8C8D,color:#FFFFFF
+    style CHECK_TRIGGER fill:#FEF9E7,stroke:#D4AC0D,stroke-width:2px,color:#7D6608
+    style CHECK_BAL_SIGN fill:#FEF9E7,stroke:#D4AC0D,stroke-width:2px,color:#7D6608
+    style HAS_EXPIRED fill:#FEF9E7,stroke:#D4AC0D,stroke-width:2px,color:#7D6608
+    style POST_EXPIRE fill:#FADBD8,stroke:#C0392B,stroke-width:2px,color:#78281F
+    style POST_ALLOC fill:#D4EFDF,stroke:#27AE60,stroke-width:2px,color:#145A32
+    style PUSH_PAY_EARN fill:#D4EFDF,stroke:#27AE60,stroke-width:2px,color:#145A32
+    style PUSH_PAY_DEDUCT fill:#FADBD8,stroke:#C0392B,stroke-width:2px,color:#78281F</code></pre>
+<hr>
+<h3 id="3-activity-diagram-2-asynchronous-payroll-batch-execution-statutory-deductions">3. Activity Diagram 2: Asynchronous Payroll Batch Execution &amp; Statutory Deductions</h3>
+<pre class="mermaid"><code>flowchart TD
+    %% =========================================================================
+    %% ACTIVITY DIAGRAM 2: PAYROLL &amp; PROGRESSIVE TAX ENGINE
+    %% =========================================================================
+
+    P_START([● Initial Node: Monthly Payroll Triggered]) --&gt; P_INIT["Finance / HR Clicks 'Create Monthly Payroll Entry'&lt;br/&gt;Select Cutoff Period &amp; Company"]
+    P_INIT --&gt; P_ENQUEUE["Enqueue Task into Redis Queue (RQ):&lt;br/&gt;&lt;code&gt;anbesa_hr.payroll.process_batch(payroll_entry)&lt;/code&gt;"]
+    P_ENQUEUE --&gt; P_RESP["Immediate Web HTTP 200 Response:&lt;br/&gt;'Task Dispatched to Background Worker'"]
+
+    %% Background Worker Execution Loop
+    P_ENQUEUE --&gt; P_WORKER["Background Python Worker Thread Picks Job"]
+    P_WORKER --&gt; P_QUERY_STAFF["Query all active staff (status = 'Permanent' or 'Probationary')&lt;br/&gt;Initialize Process Loop (Iterate Staff)"]
+
+    P_QUERY_STAFF --&gt; LOOP_START{"More Staff&lt;br/&gt;in Batch?"}
+
+    %% Staff Processing Pipeline (Fork / Concurrent Evaluation)
+    LOOP_START --&gt;|Yes: Next Employee| FORK_START[["== FORK: Concurrent Earnings Collation =="]]
+
+    FORK_START --&gt; COMP_BASE["1. Base Pay per Active Grade &amp; Step Assignment"]
+    FORK_START --&gt; COMP_ALLOW["2. Banking Allowances:&lt;br/&gt;• Cash Indemnity (if teller)&lt;br/&gt;• Acting Allowance (if acting)&lt;br/&gt;• Housing / Representation"]
+    FORK_START --&gt; COMP_LEAVE_ADJ["3. Leave Ledger Adjustments:&lt;br/&gt;• (+) Approved Encashment ETB&lt;br/&gt;• (-) Unpaid LWP Days × (Base/30)"]
+
+    COMP_BASE --&gt; JOIN_EARNINGS[["== JOIN: Consolidate Gross Earnings =="]]
+    COMP_ALLOW --&gt; JOIN_EARNINGS
+    COMP_LEAVE_ADJ --&gt; JOIN_EARNINGS
+
+    JOIN_EARNINGS --&gt; COMP_GROSS["Gross Pay = Base Pay + Allowances + Encashment - LWP"]
+
+    %% Statutory Deduction Engine (ERCA Tax Schedule)
+    COMP_GROSS --&gt; COMP_TAXABLE["Calculate Taxable Income = Gross Pay - Exempt Thresholds"]
+    COMP_TAXABLE --&gt; ERCA_BRACKET{"Evaluate Taxable Income&lt;br/&gt;against ERCA Progressive Brackets"}
+
+    ERCA_BRACKET --&gt;|0 to 600 ETB| TAX_T1["Tax Rate = 0% | Deduct 0 ETB"]
+    ERCA_BRACKET --&gt;|601 to 1,650 ETB| TAX_T2["Tax = (Taxable × 10%) - 60.00 ETB"]
+    ERCA_BRACKET --&gt;|1,651 to 3,200 ETB| TAX_T3["Tax = (Taxable × 15%) - 142.50 ETB"]
+    ERCA_BRACKET --&gt;|3,201 to 5,250 ETB| TAX_T4["Tax = (Taxable × 20%) - 302.50 ETB"]
+    ERCA_BRACKET --&gt;|5,251 to 7,800 ETB| TAX_T5["Tax = (Taxable × 25%) - 565.00 ETB"]
+    ERCA_BRACKET --&gt;|7,801 to 10,900 ETB| TAX_T6["Tax = (Taxable × 30%) - 955.00 ETB"]
+    ERCA_BRACKET --&gt;|&gt; 10,900 ETB| TAX_T7["Tax = (Taxable × 35%) - 1,500.00 ETB"]
+
+    TAX_T1 --&gt; CONSOLIDATE_TAX["Consolidate Total Income Tax (ERCA)"]
+    TAX_T2 --&gt; CONSOLIDATE_TAX
+    TAX_T3 --&gt; CONSOLIDATE_TAX
+    TAX_T4 --&gt; CONSOLIDATE_TAX
+    TAX_T5 --&gt; CONSOLIDATE_TAX
+    TAX_T6 --&gt; CONSOLIDATE_TAX
+    TAX_T7 --&gt; CONSOLIDATE_TAX
+
+    %% Pension &amp; Loans
+    CONSOLIDATE_TAX --&gt; COMP_PENSION["Calculate Statutory Pension Scheme:&lt;br/&gt;• Staff Pension (7%) = Base Salary × 0.07&lt;br/&gt;• Bank Liability (11%) = Base Salary × 0.11"]
+    COMP_PENSION --&gt; COMP_LOANS["Fetch Active Staff Loan Amortization Cuts&lt;br/&gt;(Monthly Principal + Interest Deductions)"]
+    COMP_LOANS --&gt; COMP_NET["Compute Net Pay:&lt;br/&gt;Net Pay = Gross Pay - (Tax + 7% Pension + Loans)"]
+
+    COMP_NET --&gt; SAVE_SLIP["Insert / Update tabSalary Slip&lt;br/&gt;Set bank_ac_no, docstatus = 0 (Draft)"]
+    SAVE_SLIP --&gt; LOOP_START
+
+    %% Loop Finalization &amp; Batch Export
+    LOOP_START --&gt;|No: All Staff Processed| COMPUTE_BATCH_TOTALS["Aggregate Batch Totals:&lt;br/&gt;• Total Bank-wide Gross Pay&lt;br/&gt;• Total Bank-wide Net Pay Disbursed&lt;br/&gt;• Total Tax Liability &amp; Pension Fund"]
+
+    COMPUTE_BATCH_TOTALS --&gt; GEN_CBS_FILE["&lt;b&gt;Generate CBS Salary Batch Export File:&lt;/b&gt;&lt;br/&gt;Format: Standard Bank CSV / Excel&lt;br/&gt;Columns: &lt;code&gt;Account_No | Staff_Name | Branch_Code | Net_ETB | Narration&lt;/code&gt;"]
+    GEN_CBS_FILE --&gt; NOTIFY_MAKER["Send Desk Notification to Payroll Officer &amp; Finance Director:&lt;br/&gt;'Monthly Payroll Batch Calculated Successfully'"]
+    NOTIFY_MAKER --&gt; P_DONE([◉ Activity Final: Ready for Maker-Checker Sign-Off])
+
+    %% Visual Styling
+    style P_START fill:#2C3E50,stroke:#2C3E50,color:#FFFFFF
+    style P_DONE fill:#27AE60,stroke:#27AE60,color:#FFFFFF
+    style ERCA_BRACKET fill:#FEF9E7,stroke:#D4AC0D,stroke-width:2px,color:#7D6608
+    style LOOP_START fill:#FEF9E7,stroke:#D4AC0D,stroke-width:2px,color:#7D6608
+    style FORK_START fill:#E8F8F5,stroke:#16A085,stroke-width:2px,color:#0E6251
+    style JOIN_EARNINGS fill:#E8F8F5,stroke:#16A085,stroke-width:2px,color:#0E6251
+    style GEN_CBS_FILE fill:#D4EFDF,stroke:#27AE60,stroke-width:2px,color:#145A32</code></pre>
+<hr>
+<h3 id="4-technical-precision-breakdown">4. Technical Precision Breakdown</h3>
+<h4 id="1-the-erca-progressive-tax-algorithm">1. The ERCA Progressive Tax Algorithm</h4>
+<p>In Ethiopian commercial banking, calculating personal income tax is mathematically non-linear. The Activity Diagram specifies the standard marginal tax equation:
+$<span class="arithmatex">\(\text{Tax Payable} = (\text{Taxable Income} \times \text{Bracket Rate}) - \text{Statutory Deduction Constant}\)</span>$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Monthly Taxable Income (ETB)</th>
+<th style="text-align: center;">Marginal Rate</th>
+<th style="text-align: center;">Statutory Constant (ETB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(0 \text{ to } 600\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.00\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(601 \text{ to } 1,650\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(10\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(60.00\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(1,651 \text{ to } 3,200\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(15\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(142.50\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(3,201 \text{ to } 5,250\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(20\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(302.50\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(5,251 \text{ to } 7,800\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(25\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(565.00\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(7,801 \text{ to } 10,900\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(30\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(955.00\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Over <span class="arithmatex">\(10,900\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(35\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1,500.00\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-forkjoin-concurrency-in-earnings">2. Fork/Join Concurrency in Earnings</h4>
+<p>The worker thread executes a UML <strong>Fork</strong> to evaluate base pay, dynamic allowances (Cash Indemnity, Acting, Representation), and leave adjustments independently before a <strong>Join</strong> node aggregates total gross compensation. This architecture eliminates sequential calculation bottlenecks for large branch payroll runs.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/svg-pan-zoom.min.js"></script>
+      
+        <script src="../javascripts/mermaid-zoom.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
